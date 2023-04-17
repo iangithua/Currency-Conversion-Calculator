@@ -15,6 +15,13 @@ public class CurrencyController {
 	}
 	
 	@GetMapping("/compare")
+	String getComparison(Model model)
+	{
+		model.addAttribute("something","something from controller");
+		return "compare";
+	}
+	
+	@GetMapping("/convert")
 	String getConvertion(Model model)
 	{
 		model.addAttribute("something","something from controller");

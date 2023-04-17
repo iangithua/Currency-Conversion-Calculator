@@ -55,6 +55,9 @@
                 success: function (data) {
                     $.each(data.symbols, function (key, value) {
                         var option = "<option value=\"" + key + "\">" + key + " - " + value.description  + "</option>";
+                        if (key == "USD") {
+                    option = "<option value='" + key + "' selected>" + key + " - " + value.description + "</option>";
+                }
                         $("#baseCurrencySelect").append(option);
                     });
 
